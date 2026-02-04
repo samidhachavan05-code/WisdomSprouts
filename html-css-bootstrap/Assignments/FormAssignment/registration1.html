@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#e6e6e6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    width:350px;
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h2{
+    margin:0 0 10px 0;
+}
+
+.toggle{
+    display:flex;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.field{
+    display:flex;
+    align-items:center;
+    border:1px solid #ccc;
+    border-radius:4px;
+    margin-bottom:10px;
+    overflow:hidden;
+}
+
+.icon{
+    background:#2f80ed;
+    color:white;
+    padding:10px;
+    width:40px;
+    text-align:center;
+}
+
+input{
+    border:none;
+    outline:none;
+    padding:10px;
+    width:100%;
+}
+
+.gender{
+    margin:10px 0;
+}
+
+.register-btn{
+    background:#2f80ed;
+    color:white;
+    border:none;
+    padding:10px;
+    width:100%;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.small{
+    font-size:12px;
+    margin:10px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h2>Registration</h2>
+
+<div class="toggle">
+<label><input type="radio" checked> Personal</label>
+<label><input type="radio"> Company</label>
+</div>
+
+<div class="field">
+<div class="icon">📧</div>
+<input type="email" placeholder="Email">
+</div>
+
+<div class="field">
+<div class="icon">👤</div>
+<input type="text" placeholder="Name">
+</div>
+
+<div class="field">
+<div class="icon">🔒</div>
+<input type="password" placeholder="Password">
+</div>
+
+<div class="gender">
+<label><input type="radio" name="g"> Male</label>
+<label><input type="radio" name="g"> Female</label>
+</div>
+
+<div class="small">
+By clicking Register, you agree to our <a href="#">Terms and Conditions</a>
+</div>
+
+<button class="register-btn">Register</button>
+
+</div>
+
+</body>
+</html>

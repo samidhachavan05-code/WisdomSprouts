@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f4c5c;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
+            width: 220px;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .card h2 {
+            margin: 0;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .fruits h2 {
+            background-color: #9acd32;
+        }
+
+        .vegetables h2 {
+            background-color: #8e7cc3;
+        }
+
+        .groceries h2 {
+            background-color: #d36c6c;
+        }
+
+        .card ul, .card ol {
+            padding: 20px 40px;
+            font-size: 16px;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Lists</h1>
+
+    <div class="container">
+
+        <!-- Fruits -->
+        <div class="card fruits">
+            <h2>FRUITS</h2>
+            <ol>
+                <li>Apple</li>
+                <li>Mango</li>
+                <li>Orange</li>
+            </ol>
+        </div>
+
+        <!-- Vegetables -->
+        <div class="card vegetables">
+            <h2>VEGETABLES</h2>
+            <ul style="list-style-type: square;">
+                <li>Potato</li>
+                <li>Tomato</li>
+                <li>Onion</li>
+            </ul>
+        </div>
+
+        <!-- Groceries -->
+        <div class="card groceries">
+            <h2>GROCERIES</h2>
+            <ul style="list-style-type: disc;">
+                <li>Rice</li>
+                <li>Flour</li>
+                <li>Pulses</li>
+            </ul>
+        </div>
+
+    </div>
+
+    
+        
+    </body>
+    </html>
+
+
+
+
+   

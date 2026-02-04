@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+
+<style>
+html, body{
+    margin:0;
+    width:100%;
+    height:100%;
+    font-family: Arial, sans-serif;
+    background:#1e4fb3;   /* FULL PAGE BLUE BACKGROUND */
+}
+
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    width:80%;
+    max-width:900px;
+    background:rgb(182, 217, 238);
+    display:flex;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+    border-radius:8px;
+    overflow:hidden;
+}
+
+/* Left blue panel */
+/* .left{
+    width:25%;
+    background:#0b2f7a;
+} */
+
+/* Right white panel */
+.right{
+    width:75%;
+    padding:30px;
+}
+
+h2{
+    margin-top:0;
+}
+
+.section-title{
+    font-weight:bold;
+    margin:15px 0 8px 0;
+}
+
+/* 3-column layout */
+.row{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:15px;
+    margin-bottom:15px;
+}
+
+input{
+    width:100%;
+    padding:8px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+label{
+    display:block;
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+button{
+    background:#1e4fb3;
+    color:white;
+    border:none;
+    padding:10px 25px;
+    cursor:pointer;
+    border-radius:4px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<!-- <div class="left"></div> -->
+
+<div class="right">
+
+<h2>Registration</h2>
+
+<div class="section-title">Personal Details</div>
+
+<div class="row">
+<div>
+<label>Full Name</label>
+<input placeholder="Enter your name">
+</div>
+
+<div>
+<label>Date of Birth</label>
+<input placeholder="Enter birth date">
+</div>
+
+<div>
+<label>Email</label>
+<input placeholder="Enter your email">
+</div>
+</div>
+
+<div class="row">
+<div>
+<label>Mobile number</label>
+<input placeholder="Enter mobile number">
+</div>
+
+<div>
+<label>Gender</label>
+<input placeholder="Enter your gender">
+</div>
+
+<div>
+<label>Occupation</label>
+<input placeholder="Enter occupation">
+</div>
+</div>
+
+<div class="section-title">Identity Details</div>
+
+<div class="row">
+<div>
+<label>ID Type</label>
+<input placeholder="Enter ID type">
+</div>
+
+<div>
+<label>ID Number</label>
+<input placeholder="Enter ID number">
+</div>
+
+<div>
+<label>Issue Authority</label>
+<input placeholder="Enter issue department">
+</div>
+</div>
+
+<div class="row">
+<div>
+<label>Issue Date</label>
+<input placeholder="Enter ID issue date">
+</div>
+
+<div>
+<label>Issue State</label>
+<input placeholder="Enter ID issue state">
+</div>
+
+<div>
+<label>Expiry Date</label>
+<input placeholder="Enter ID expiry date">
+</div>
+</div>
+
+<button>Next →</button>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

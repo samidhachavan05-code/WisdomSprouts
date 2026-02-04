@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Login</title>
+
+    <!-- Font Awesome for Instagram Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+        }
+
+        .main {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left {
+            width: 45%;
+            padding: 40px;
+        }
+
+        .insta-icon {
+            font-size: 50px;
+            color: #e1306c;
+            margin-bottom: 20px;
+        }
+
+        .left h1 {
+            font-size: 30px;
+            font-weight: normal;
+        }
+
+        .left span {
+            color: #ff5a5f;
+        }
+
+        .left img {
+            width: 220px;
+            margin-top: 20px;
+        }
+
+        .right {
+            width: 35%;
+            background-color: #121212;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .right h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #1c1c1c;
+            border: 1px solid #333;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0095f6;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .links a {
+            color: #0095f6;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .fb {
+            border: 1px solid #333;
+            padding: 10px;
+            margin-top: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main">
+
+    <!-- Left Section -->
+    <div class="left">
+        <i class="fab fa-instagram insta-icon"></i>
+
+        <h1>
+            See everyday moments from<br>
+            your <span>close friends.</span>
+        </h1>
+
+        <!-- Image -->
+        <img src="./Assets/insta.jpg" alt="Instagram Preview">
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+        <h2>Log into Instagram</h2>
+
+        <input type="text" placeholder="Mobile number, username or email">
+        <input type="password" placeholder="Password">
+
+        <button>Log in</button>
+
+        <div class="links">
+            <a href="#">Forgot password?</a>
+        </div>
+
+        <div class="fb">
+            Log in with Facebook
+        </div>
+
+        <div class="links">
+            <a href="#">Create new account</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

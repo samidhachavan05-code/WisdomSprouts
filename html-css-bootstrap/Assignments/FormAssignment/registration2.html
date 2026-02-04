@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register Page</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#07d176;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+
+.card{
+    width:900px;
+    height:450px;
+    display:flex;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Left Section */
+.left{
+    width:45%;
+    background:#1f4f5f;
+    color:white;
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.left h1{
+    margin:0;
+}
+
+.left p{
+    font-size:14px;
+    opacity:0.8;
+}
+
+.signin-btn{
+    margin-top:20px;
+    background:transparent;
+    color:white;
+    border:1px solid white;
+    padding:10px 25px;
+    width:150px;
+    cursor:pointer;
+}
+
+/* Right Section */
+.right{
+    width:55%;
+    padding:40px;
+}
+
+.social{
+    display:flex;
+    gap:10px;
+}
+
+.social button{
+    border:1px solid #ccc;
+    background:white;
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+form{
+    margin-top:20px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+.signup-btn{
+    background:goldenrod;
+    color:white;
+    border:none;
+    padding:10px 25px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<!-- Left Panel -->
+<div class="left">
+<h1>Welcome Back!</h1>
+<p>Provide your personal details to use all features</p>
+<button class="signin-btn">SIGN IN</button>
+</div>
+
+<!-- Right Panel -->
+<div class="right">
+<h2>Register With</h2>
+
+<div class="social">
+<button>G+</button>
+<button>f</button>
+<button>Git</button>
+<button>in</button>
+</div>
+
+<p style="margin:15px 0;">OR</p>
+<p>Fill Out The Following Info For Registration</p>
+
+<form>
+<input placeholder="Name">
+<input placeholder="Email">
+<input type="password" placeholder="Password">
+<button class="signup-btn">SIGN UP</button>
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
