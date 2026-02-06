@@ -1,0 +1,154 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#121212;
+    color:white;
+}
+
+/* Layout */
+.app{
+    display:flex;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    width:260px;
+    height:100vh;
+    background:#000;
+    padding:20px;
+}
+
+.logo{
+    color:#1DB954;
+}
+
+.library button{
+    width:100%;
+    padding:10px;
+    background:white;
+    border:none;
+    border-radius:20px;
+    margin-top:10px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ===== MAIN AREA ===== */
+.main{
+    flex:1;
+    padding:20px;
+}
+
+/* Top bar */
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#181818;
+    padding:15px;
+    border-radius:10px;
+}
+
+.topbar input{
+    width:300px;
+    padding:8px;
+    border-radius:20px;
+    border:none;
+}
+
+.top-buttons button{
+    margin-left:10px;
+    padding:8px 15px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* ===== CARDS ===== */
+.cards{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.card{
+
+
+   
+
+    
+    width:180px;
+    background:#181818;
+    padding:10px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+
+.card:hover{
+    background:#282828;
+    transform:scale(1.05);
+}
+
+.card img{
+    height: 180px;
+    width:100%;
+    border-radius:10px;
+}
+
+/* ===== ARTISTS ===== */
+.artists{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.artist{
+    text-align:center;
+}
+
+.artist img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+}
+
+/* ===== HORIZONTAL SCROLL ROW ===== */
+.scroll-row{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+.scroll-row::-webkit-scrollbar{
+    height:6px;
+}
+
+.scroll-row::-webkit-scrollbar-thumb{
+    background:#1DB954;
+    border-radius:10px;
+}
+
+/* Horizontal cards */
+.scroll-row .card{
+    min-width:320px;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:900px){
+    .sidebar{
+        width:200px;
+    }
+}
+
+@media (max-width:700px){
+    .app{
+        flex-direction:column;
+    }
+    .sidebar{
+        width:100%;
+        height:auto;
+    }
+}
