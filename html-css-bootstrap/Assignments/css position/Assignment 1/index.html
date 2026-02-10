@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    height: 150vh;
+}
+
+.box{
+    width:150px;
+    height:150px;
+    text-align:center;
+    padding-top:60px;
+    color:white;
+    font-weight:bold;
+}
+
+/* Box 1 */
+.static{
+    background:red;
+}
+
+/* Box 2 */
+.relative{
+    background:blue;
+    position:relative;
+    top:40px;
+    left:40px;
+}
+
+/* Box 3 */
+.absolute{
+    background:green;
+    position:absolute;
+    bottom:20px;
+    right:20px;
+}
+
+/* Box 4 */
+.fixed{
+    background:purple;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+}
+
+/* overlap effect */
+.relative{
+    z-index:2;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box static">Static</div>
+<div class="box relative">Relative</div>
+<div class="box absolute">Absolute</div>
+<div class="box fixed">Fixed</div>
+
+</body>
+</html>
