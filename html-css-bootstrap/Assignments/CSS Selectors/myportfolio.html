@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Portfolio</title>
+
+    <style>
+
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        /* Pseudo-class */
+        header nav a:hover {
+            color: yellow;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+        }
+
+        /* ID Selector */
+        #about {
+            background: #f4f4f4;
+        }
+
+        /* Class Selector */
+        .project {
+            border: 1px solid gray;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        /* Descendant Selector */
+        .project h3 {
+            color: darkblue;
+        }
+
+        /* Attribute Selector */
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid gray;
+        }
+
+        button {
+            padding: 8px 15px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkgreen;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>John Doe</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a web developer learning HTML and CSS.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>This is my first project.</p>
+        </div>
+
+        <div class="project">
+            <h3>To-Do App</h3>
+            <p>A simple task management app.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name"><br>
+            <input type="email" placeholder="Your Email"><br>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 John Doe</p>
+    </footer>
+
+</body>
+</html>
