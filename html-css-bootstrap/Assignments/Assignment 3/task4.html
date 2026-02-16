@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device Table</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        /* Main Header */
+        th {
+            background-color: #1abc9c;
+            color: black;
+        }
+
+        /* Sub Header (Model / Storage) */
+        .subhead {
+            background-color: #f4d03f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+
+    <!-- Main Header -->
+    <tr>
+        <th>Device</th>
+        <th>Brand</th>
+        <th colspan="2">Specifications</th>
+    </tr>
+
+    <!-- Sub Header Row -->
+    <tr class="subhead">
+        <td></td>
+        <td></td>
+        <td>Model</td>
+        <td>Storage</td>
+    </tr>
+
+    <!-- Smartphone Section -->
+    <tr>
+        <td rowspan="2">Smartphone</td>
+        <td rowspan="2">Apple</td>
+        <td>iPhone 12 Pro</td>
+        <td>256GB</td>
+    </tr>
+
+    <tr>
+        <td>iPhone SE</td>
+        <td>128GB</td>
+    </tr>
+
+    <!-- Laptop -->
+    <tr>
+        <td>Laptop</td>
+        <td>HP</td>
+        <td colspan="2">15.6" Display</td>
+    </tr>
+
+    <!-- Tablet -->
+    <tr>
+        <td>Tablet</td>
+        <td>Samsung</td>
+        <td colspan="2">10.5" Display</td>
+    </tr>
+
+</table>
+
+</body>
+</html>
