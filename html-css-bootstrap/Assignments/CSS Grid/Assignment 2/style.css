@@ -1,0 +1,30 @@
+.container{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    height:100vh;
+}
+
+header{
+    grid-area: header;
+    background: orange;
+}
+
+aside{
+    grid-area: sidebar;
+    background: lightblue;
+}
+
+main{
+    grid-area: main;
+    background: lightgreen;
+}
+
+footer{
+    grid-area: footer;
+    background: gray;
+}
