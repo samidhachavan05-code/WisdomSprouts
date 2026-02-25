@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Georgia, serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* HERO SECTION */
+.hero{
+    height:450px;
+    background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("./Assets/Robertbg.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h3{
+    font-style:italic;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.profile-box img{
+    width:160px;
+    height:160px;
+    border-radius:5px;
+    border:5px solid white;
+}
+
+.profile-box h1{
+    margin-top:15px;
+    font-size:30px;
+}
+
+.profile-box p{
+    margin-top:5px;
+    font-size:16px;
+}
+
+/* NAVIGATION */
+nav{
+    background:white;
+    padding:15px 0;
+    border-bottom:1px solid #ddd;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+nav ul li{
+    cursor:pointer;
+    font-size:16px;
+    padding-bottom:5px;
+}
+
+nav ul li.active{
+    color:#c2185b;
+    border-bottom:2px solid #c2185b;
+}
+
+/* CONTENT */
+.content{
+    max-width:900px;
+    margin:40px auto;
+    text-align:center;
+    color:#555;
+    padding:0 20px;
+}
+
+.content p{
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.social-icons{
+    margin-top:25px;
+}
+
+.social-icons a{
+    text-decoration:none;
+    margin:0 10px;
+    font-size:18px;
+    display:inline-block;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    background:#eee;
+    border-radius:50%;
+    transition:0.3s;
+}
+
+/* Individual Brand Colors */
+
+.social-icons a:nth-child(1){
+    color:#1877F2; 
+}
+
+.social-icons a:nth-child(2){
+    color:#1DA1F2;   
+}
+
+.social-icons a:nth-child(3){
+    color:#E1306C; 
+}
+
+.social-icons a:nth-child(4){
+    color:#0A66C2;   
+}
+
+.social-icons a:nth-child(5){
+    color:#EA4335;   
+}
+
+/* Hover Effect */
+.social-icons a:hover{
+    background:#c2185b;
+    color:white;
+    transform:scale(1.1);
+}
+
+footer{
+    background:#3b0d2f;
+    color:white;
+    padding:20px 0;
+    text-align:center;   
+}

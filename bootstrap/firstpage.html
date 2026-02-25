@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        :root {
+            --bodyBGColor: rgb(235, 235, 235);
+        }
+
+        body {
+            background-color: var(--bodyBGColor);
+        }
+        .coroImage{
+            width: 100%;
+            height: 600px;
+        }
+        .girlImageText{
+            background-color: black !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ColorsAndConatiner">Colors and Container</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#customNavTab">custom Nav Tab</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#table">Table</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                    <i class="fa-solid fa-user"></i>
+                    </button>
+
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- offCanvas  -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container w-25 ">
+            <a class="navbar-brand" href="#">Click to open login form</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                LOGIN
+            </button>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Login here...</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-center bg-warning m-5 ">Hello, world!</h1>
+
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <!-- <img src="../assets/forCoroTwo.jpg" class="d-block coroImage" alt="..."> -->
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!-- <img src="../assets/nature.jpeg" class="d-block coroImage" alt="..."> -->
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!-- <img src="../assets/dowgirlWithBooknload.jpeg" class="d-block coroImage" alt="..."> -->
+      <div class="carousel-caption d-none d-md-block girlImageText">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+    <div id="ColorsAndConatiner">
+        <p class="text-primary mx-3">Primary</p>
+        <p class="text-secondary">Secondary</p>
+        <p class="text-danger my-4">Danger</p>
+        <p class="text-success">Success</p>
+        <p class="text-dark">Dark</p>
+        <p class="text-white bg-dark w-25">Light</p>
+
+        <button class="btn btn-dark">Register</button>
+        <button class="btn btn-outline-warning">Login</button>
+
+        <div class="container bg-primary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem
+            fugiat molestias voluptas quidem hic eum aspernatur illum unde eaque porro accusamus, numquam dolore minima
+            nemo incidunt eius suscipit in quo!</div>
+        <div class="container-fluid bg-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, impedit
+            voluptatem quaerat, possimus, recusandae ex sed earum suscipit obcaecati ipsam repellendus accusamus id. Est
+            nobis aperiam fugiat perspiciatis sequi nihil.</div>
+
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-12 col-md-6 col-lg-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem,
+                    quibusdam!</div>
+                <div class="col-12 col-md-6 col-lg-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam
+                    eos officiis dolor corrupti.</div>
+                <div class="col-12 col-md-6 col-lg-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
+                    tempore impedit hic incidunt sed vero!</div>
+                <div class="col-12 col-md-6 col-lg-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
+                    repellat debitis omnis in quidem. A debitis voluptas tempore perferendis.</div>
+            </div>
+        </div>
+    </div>
+
+    <section id="table">
+        <div style="height: 500px; overflow: scroll;" class="conatiner w-50 mx-auto">
+            <table class="table">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">Sr No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Percentange</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Sushil</td>
+                        <td>First</td>
+                        <td>91</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Neera</td>
+                        <td>First</td>
+                        <td>93</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Tasmay</td>
+                        <td>Second</td>
+                        <td>95</td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>Saket</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>006</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>007</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>008</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>009</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>010</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>011</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>012</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>013</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>014</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>015</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>016</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>017</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>018</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>019</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>020</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>021</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>022</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>023</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>024</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>025</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>026</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>027</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>028</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>029</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>030</td>
+                        <td>Tejas</td>
+                        <td>Forth</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>031</td>
+                        <td>Tejas</td>
+                        <td>Second</td>
+                        <td>93</td>
+                    </tr>
+                    <tr>
+                        <td>032</td>
+                        <td>Tirtha</td>
+                        <td>Second</td>
+                        <td>90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="customNavTab">
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="info-tab" data-bs-toggle="tab" data-bs-target="#info-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Information</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#gallery-tab-pane"
+                    type="button" role="tab" aria-controls="gallery-tab-pane" aria-selected="false">Gallery</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+            </li>
+
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="info-tab-pane" role="tabpanel" aria-labelledby="info-tab"
+                tabindex="0">
+                <div class="d-flex">
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus in quae totam, perspiciatis
+                        distinctio facilis quos facere culpa beatae doloribus.</div>
+                    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, deserunt?</div>
+                    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, incidunt eveniet.
+                        Perferendis unde fugit atque neque! Magnam quaerat quisquam odit, aliquam, numquam hic iure, ad
+                        nulla blanditiis quae tempora quidem?</div>
+                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="gallery-tab-pane" role="tabpanel" aria-labelledby="gallery-tab" tabindex="0">
+                <div class="d-flex">
+                    <img src="../assets/bgImg.jpeg" alt="" />
+                    <img src="../assets/IceCream1.jpeg" alt="" />
+                    <img src="../assets/instaGirl.jpeg" alt="" />
+                    <img src="../assets/girlBook.jpeg" alt="" />
+                    <img src="../assets/nature.jpeg" alt="" />
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                <div class="container w-25 mx-auto mt-2">
+                    <form>
+                        <div class="mb-3 form-floating">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Comments</label>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="height: 100px;"></section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facere aliquam ab eaque maiores temporibus sequi labore, qui sint, tempora voluptas accusantium. Fuga molestiae nemo neque. Ipsa hic deserunt facere qui corporis quibusdam, tempora fuga saepe voluptas odio culpa fugiat molestiae cupiditate rerum aliquam quisquam! Veritatis molestias autem laborum eius corrupti rem suscipit assumenda esse voluptatibus a ea, earum adipisci tempore eveniet totam at possimus consequuntur! Quos, impedit nesciunt architecto neque recusandae dolor molestias accusantium, vero sequi odit nulla veritatis mollitia corrupti sint maxime praesentium ex quis? Pariatur mollitia ratione ullam illum. Culpa eius magnam porro veniam optio! Facere cumque quos quae vero, aut culpa esse, iure ipsa corrupti explicabo, velit aperiam ex dolor dolores totam minus vel quam sapiente nobis voluptates accusantium delectus! Odio sapiente dolores inventore dicta. Qui quidem iste possimus illum sed odio, quae doloribus unde vel modi nostrum similique quod aliquid omnis aperiam consequuntur accusantium saepe necessitatibus! Officia, tempore. Nulla harum pariatur unde cumque alias accusamus. Laboriosam cum soluta quidem incidunt porro non in possimus debitis quos obcaecati veritatis quo perspiciatis sint molestias nesciunt illum ipsam esse ratione ex exercitationem iusto facilis, odio enim. Sequi, dolores quasi, fugit similique dolor beatae cum ipsa, nisi dolorum pariatur expedita omnis quibusdam. Alias itaque eos laudantium harum eius, sequi magni corporis quas facere aspernatur quae sint architecto explicabo. Harum maiores earum quos fugiat sunt quis soluta dignissimos voluptatum nobis suscipit, libero rerum! Hic reprehenderit perspiciatis tenetur ratione quos inventore dolorum corrupti. Ipsam soluta quos obcaecati molestias quidem. Repellat tenetur neque eos voluptates dolorem veritatis eum nihil amet voluptatibus? Voluptatum nisi modi tempora consequuntur et amet unde ut? Cum atque, nostrum in repellat consectetur corporis cumque! Laudantium veniam excepturi, culpa magni dignissimos et voluptatum obcaecati. Natus sed accusamus dolores libero omnis, pariatur, nihil, soluta odit in animi a illo itaque.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
