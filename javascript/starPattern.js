@@ -15,6 +15,23 @@ printSquare(5)
 
 
 
+
+// function printSquare(n){
+//     for(i=1;i<=n;i++){
+//         line = ''
+//         for(j=1; j<=n;j++){
+//             line+='* '
+//         }
+//         console.log(line)
+//     }
+// }
+// printSquare(5)
+
+
+
+
+
+
 function printTriangle(n){
 
 for (let i = 1; i <= n; i++) {
