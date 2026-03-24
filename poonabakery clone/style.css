@@ -1,0 +1,66 @@
+/* HERO SLIDER */
+
+.heroImg{
+height:450px;
+object-fit:cover;
+}
+
+.carousel{
+position: relative;
+margin-bottom: 50px;
+}
+
+.heroText{
+position:absolute;
+top:40%;
+left:15%;
+background:#e74c3c;
+color:white;
+padding:20px 30px;
+font-size:28px;
+font-weight:bold;
+}
+
+.heroText p{
+background:#f1c40f;
+color:black;
+padding:6px 12px;
+font-size:18px;
+margin-top:10px;
+display:inline-block;
+}
+
+
+.card img{
+    height: 200px;      /* सगळ्या images same height */
+    object-fit: cover;  /* image distort होणार नाही */
+}
+
+/* Navbar Background */
+
+nav{
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navLists{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.navItem{
+    margin: 0 20px;
+}
+
+.navLink{
+    font-size: x-large;
+    color: red;
+    text-decoration: none;
+}
+
+.navLink:hover{
+    color: yellow;
+}
