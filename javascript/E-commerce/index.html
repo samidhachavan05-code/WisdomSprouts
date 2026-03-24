@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Commerce</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">E-Commerce</a>
+
+            <div class="d-flex">
+                <a href="#" class="nav-link">
+                    Cart <sup class="badge bg-danger" id="cartLength">0</sup>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-center mt-3">Products</h1>
+
+    <div class="container">
+        <div class="row" id="renderProducts"></div>
+    </div>
+
+    <!-- Add Product Button -->
+    <div class="text-center mt-3">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">
+            Add Product
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addProduct">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5>Add Product</h5>
+                </div>
+
+                <div class="modal-body">
+
+                    <input type="text" id="title" class="form-control mb-2" placeholder="Title">
+
+                    <input type="text" id="description" class="form-control mb-2" placeholder="Description">
+
+                    <!-- Category -->
+                    <select id="category" class="form-control mb-2">
+                        <option disabled selected>Select Category</option>
+                        <option>Electronics</option>
+                        <option>Clothing</option>
+                        <option>Food</option>
+                    </select>
+
+                    <!-- Brand -->
+                    <select id="brand" class="form-control mb-2">
+                        <option disabled selected>Select Brand</option>
+                        <option>Apple</option>
+                        <option>Samsung</option>
+                        <option>Nike</option>
+                        <option>Amul</option>
+                    </select>
+
+                    <input type="number" id="price" class="form-control mb-2" placeholder="Price">
+
+                    <input type="number" id="quantity" class="form-control mb-2" value="1">
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="addProduct()">Add</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
