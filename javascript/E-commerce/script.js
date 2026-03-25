@@ -1,128 +1,188 @@
-let titleElmt = document.querySelector('#title')
-let descriptionElmt = document.querySelector('#description')
-let categoryElmt = document.querySelector('#category')
-let brandElmt = document.querySelector('#brand')
-let priceElmt = document.querySelector('#price')
-let quantityElmt = document.querySelector('#quantity')
-let cartLengthElmt = document.getElementById('cartLength')
+titleElmt = document.querySelector('#title')
+descriptionElmt = document.querySelector('#description')
+categoryElmt = document.querySelector('#category')
+brandElmt = document.querySelector('#brand')
+priceElmt = document.querySelector('#price')
+quantityElmt = document.querySelector('#quantity')
+cartLengthElmt = document.getElementById('cartLength')
 
 const renderProductsElmt = document.querySelector('#renderProducts')
 
-// Save Products
+products = []
+cart = []
+
 function saveToLocal(p) {
     localStorage.setItem('B81', JSON.stringify(p))
 }
-
-// Get Products
 function getFromLocal() {
-    return JSON.parse(localStorage.getItem('B81')) || []
+    return JSON.parse(localStorage.getItem('B81'))
 }
-
-// Save Cart
-function saveCartToLocal(c) {
+function saveCartToLocal(c){
     localStorage.setItem('Cart81', JSON.stringify(c))
 }
 
-// Get Cart
-function getCartFromLocal() {
-    return JSON.parse(localStorage.getItem('Cart81')) || []
+function getCartFromLocal (){
+    return JSON.parse(localStorage.getItem('Cart81'))
 }
+function renderProducts(renProd) {
+    const renderProducts1 = renProd || getFromLocal()
+    console.log(renderProducts)
 
-// Render Products
-function renderProducts() {
-    let products = getFromLocal()
+    renderProductsElmt.innerHTML = renderProducts1.map((prod, index) => `
+            <div class='col-12 col-md-6 col-lg-4 mr-2'>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h4 class="card-title">${prod.title}</h4>
+    <p class="card-text">${prod.description}</p>
+    <h5>Price : &#8377; <span>${prod.price}</span></h5>
+    <button class="btn btn-primary" onclick="addToCart(${prod.id})">Add To Cart</button>
+  </div>
+</div>
 
-    renderProductsElmt.innerHTML = products.map((prod) => `
-        <div class='col-12 col-md-6 col-lg-4 mt-3'>
-            <div class="card p-3">
-                <h4>${prod.title}</h4>
-                <p>${prod.description}</p>
-                <h6>Category: ${prod.category}</h6>
-                <h6>Brand: ${prod.brand}</h6>
-                <h5>Price: ₹${prod.price}</h5>
-                <button class="btn btn-primary" onclick="addToCart(${prod.id})">
-                    Add To Cart
-                </button>
             </div>
-        </div>
     `).join('')
 }
 
-// Add New Product
+
+
+function searchByName(){
+    searchInputValue = document.getElementById('searchInput').value
+    const renderProducts2 = getFromLocal()
+
+    const prodSearchByName = renderProducts2.filter((p)=>p.title.toLowerCase().includes(searchInputValue.toLowerCase()))
+
+    console.log(prodSearchByName)
+    renderProducts(prodSearchByName)
+}
+
+function clearFilter(){
+    renderProducts()
+}
+
+
+
+
+
 function AddNewProduct() {
+    titleV = titleElmt.value
+    descrV = descriptionElmt.value
+    categoryV = categoryElmt.value
+    brandV = brandElmt.value
+    priceV = Number(priceElmt.value)
+    quantityV = Number(quantityElmt.value)
 
-    let newProduct = {
+    newProduct = {
         id: Date.now(),
-        title: titleElmt.value,
-        description: descriptionElmt.value,
-        category: categoryElmt.value,
-        brand: brandElmt.value,
-        price: Number(priceElmt.value),
-        quantity: Number(quantityElmt.value)
+        title: titleV,
+        description: descrV,
+        category: categoryV,
+        brand: brandV,
+        price: priceV,
+        quantity: quantityV
     }
-
-    let products = getFromLocal()
-    products.push(newProduct)
-
-    saveToLocal(products)
+    getProd = getFromLocal()
+    console.log(getProd)
+    getProd.push(newProduct)
+    console.log(getProd)
+    saveToLocal(getProd)
     renderProducts()
 
-    // Clear form
     titleElmt.value = ''
     descriptionElmt.value = ''
     categoryElmt.value = ''
     brandElmt.value = ''
     priceElmt.value = ''
-    quantityElmt.value = ''
-
-    alert("Product Added ✅")
+    quantityElmt.value = '' 
+    // close the modal after succesfully added prodcut 
 }
 
-// Add to Cart
-function addToCart(id) {
+function addToCart(id){
+    const getCArtFromLocal = getCartFromLocal()
 
-    let cart = getCartFromLocal()
-    let products = getFromLocal()
+    getProd = getFromLocal()
 
-    let product = products.find(p => p.id == id)
-
-    if (!product) {
-        alert('Product not found ❌')
-        return
+    findIndex1 = getProd.findIndex((p)=> p.id == id)
+    if(findIndex1 == -1 ){
+        alert('Cant add to cart')
     }
 
-    // Check if already in cart
-    let existing = cart.find(item => item.id == id)
+    newCartItem = getProd[findIndex1]
 
-    if (existing) {
-        existing.quantity += 1
-    } else {
-        cart.push({
-            id: product.id,
-            title: product.title,
-            price: product.price,
-            quantity: 1
-        })
+    // Before add check that item is presnt or not in cart array
+    // if present increase quantity by 1
+
+    productInCart = getCArtFromLocal.find((p,i)=>p.product_id == newCartItem.id)
+
+    indexOfProdInCart = getCArtFromLocal.findIndex((p,i)=>p.product_id == newCartItem.id)
+
+
+
+    if(indexOfProdInCart == -1){
+
+    // create new object for product id, product name and product price 
+    // and new property as quantity of number ofproduct in cart only 
+    // product in cart new id 
+
+    newProdINCart = {
+        id:Date.now(),
+        product_id:newCartItem.id,
+        product_name:newCartItem.title,
+        product_price:newCartItem.price,
+        quantity_inCart:1
+    }
+    // add this object to cart
+
+    // getCArtFromLocal.push(newCartItem)
+    getCArtFromLocal.push(newProdINCart)
+
+    saveCartToLocal(getCArtFromLocal)
+    console.log(getCArtFromLocal)
+    cartLengthElmt.textContent = getCArtFromLocal.length
+    }else{
+    getCArtFromLocal[indexOfProdInCart].quantity_inCart = productInCart.quantity_inCart + 1
+    saveCartToLocal(getCArtFromLocal)
     }
 
-    saveCartToLocal(cart)
 
-    cartLengthElmt.textContent = cart.length
 }
 
-// On Load
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
+    getProd = getFromLocal()
 
-    if (!localStorage.getItem('B81')) {
-        saveToLocal([])
+    if (!getProd) {
+        saveToLocal(products)
     }
 
-    if (!localStorage.getItem('Cart81')) {
-        saveCartToLocal([])
+    getCart = getCartFromLocal()
+    if(!getCart){
+        saveCartToLocal(cart)
     }
+renderProducts()
+    cartLengthElmt.textContent = getCart.length
 
-    renderProducts()
-
-    let cart = getCartFromLocal()
-    cartLengthElmt.textContent = cart.length
 })
+
+
+
+
+
+// *******************. localStorage concept. *************
+// str = 'Batch81'
+
+// localStorage.setItem('batch', str)
+// str2 = localStorage.getItem('batch')
+// console.log(str2)
+
+// objBatch = {
+//     id:243,
+//     name:'Batch81'
+// }
+
+// localStorage.setItem('b', JSON.stringify(objBatch))
+// newObj = JSON.parse(localStorage.getItem('b'))
+
+// console.log(newObj)
+// console.log(typeof(newObj))
