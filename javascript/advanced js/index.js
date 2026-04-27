@@ -1,6 +1,6 @@
-// ===============================
+
 // 1. IMAGE SLIDER
-// ===============================
+
 
 const images = [
    "assets/flower1.jpg",
@@ -31,9 +31,9 @@ setInterval(nextImage, 3000);
 showImage();
 
 
-// ===============================
+
 // 2. DIGITAL CLOCK
-// ===============================
+
 
 function showClock() {
   const now = new Date();
@@ -52,9 +52,9 @@ function showClock() {
 setInterval(showClock, 1000);
 
 
-// ===============================
+
 // 3. COUNTDOWN TIMER
-// ===============================
+
 
 function countdown(seconds) {
   let remaining = seconds;
@@ -73,9 +73,9 @@ function countdown(seconds) {
 countdown(5);
 
 
-// ===============================
+
 // 4. CALLBACK FUNCTION
-// ===============================
+
 
 function readFile(callback) {
   setTimeout(() => {
