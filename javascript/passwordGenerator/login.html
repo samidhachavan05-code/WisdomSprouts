@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<form onsubmit="loginUser(event)">
+  Email: <input type="email" id="email"><br><br>
+  Password: <input type="password" id="password"><br><br>
+
+  <button type="submit">Login</button>
+</form>
+
+<script>
+function loginUser(e) {
+  e.preventDefault();
+
+  let email = document.getElementById("email").value;
+  let pass = document.getElementById("password").value;
+
+  let data = localStorage.getItem(email);
+
+  if (!data) {
+    alert("Email not registered");
+    return;
+  }
+
+  let user = JSON.parse(data);
+
+  if (user.password !== pass) {
+    alert("Invalid credentials");
+    return;
+  }
+
+  alert("Login Successful!");
+  window.location.href = "home.html";
+}
+</script>
+
+</body>
+</html>
