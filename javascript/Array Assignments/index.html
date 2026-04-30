@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Array Projects</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<!-- 1 To Do List -->
+<div class="box">
+<h2>1. To-Do List Manager</h2>
+<input type="text" id="taskInput" placeholder="Enter task">
+<button onclick="addTask()">Add Task</button>
+<button onclick="clearTasks()">Clear All</button>
+<ul id="taskList"></ul>
+</div>
+
+<!-- 2 Student Marks -->
+<div class="box">
+<h2>2. Student Marks Calculator</h2>
+<input type="number" id="markInput" placeholder="Enter mark">
+<button onclick="addMark()">Add Mark</button>
+<button onclick="calculateMarks()">Calculate</button>
+<button onclick="resetMarks()">Reset</button>
+<p id="marksResult"></p>
+</div>
+
+<!-- 3 Search Array -->
+<div class="box">
+<h2>3. Search in an Array</h2>
+<input type="text" id="searchInput" placeholder="Search name">
+<button onclick="searchItem()">Search</button>
+<p id="searchResult"></p>
+</div>
+
+<!-- 4 Even Odd -->
+<div class="box">
+<h2>4. Filter Even and Odd Numbers</h2>
+<input type="number" id="numInput" placeholder="Enter number">
+<button onclick="addNumber()">Add Number</button>
+<button onclick="showEven()">Show Even</button>
+<button onclick="showOdd()">Show Odd</button>
+<button onclick="clearNumbers()">Clear</button>
+
+<h3>Even Numbers</h3>
+<p id="evenResult"></p>
+
+<h3>Odd Numbers</h3>
+<p id="oddResult"></p>
+</div>
+
+<!-- 5 Sort Names -->
+<div class="box">
+<h2>5. Sort Names Alphabetically</h2>
+<input type="text" id="nameInput" placeholder="Enter name">
+<button onclick="addName()">Add Name</button>
+<button onclick="sortNames()">Sort</button>
+<button onclick="resetNames()">Reset</button>
+<div id="nameList"></div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
